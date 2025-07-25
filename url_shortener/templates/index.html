@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>URL Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python URL Shortener | Ashutosh Mishra</title>
+    <meta name="description" content="Shorten your long URLs easily using a clean Python-based URL shortener. Free, simple, and fast.">
+
+    <!-- ✅ SEO & Social Media Preview Meta Tags -->
+    <link rel="canonical" href="https://url-shortner-fpj4.onrender.com/" />
+    <meta property="og:title" content="Python URL Shortener" />
+    <meta property="og:description" content="Shorten your long URLs easily using a clean Python-based URL shortener. Free, simple, and fast." />
+    <meta property="og:image" content="https://i.ibb.co/CKGyvys/your-preview-image.jpg" />
+    <meta property="og:url" content="https://url-shortner-fpj4.onrender.com/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Python URL Shortener" />
+    <meta name="twitter:description" content="Shorten your long URLs easily using a clean Python-based URL shortener. Free, simple, and fast." />
+    <meta name="twitter:image" content="https://i.ibb.co/CKGyvys/your-preview-image.jpg" />
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* 🔽 your existing CSS as it is... */
         body {
             margin: 0;
             padding: 0;
@@ -17,7 +34,6 @@
             align-items: center;
             overflow: hidden;
         }
-
         .glass-container {
             background: rgba(255, 255, 255, 0.15);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -31,13 +47,11 @@
             width: 90%;
             max-width: 500px;
         }
-
         h1 {
             font-size: 26px;
             margin-bottom: 20px;
             color: #003049;
         }
-
         input[type="text"] {
             width: 80%;
             padding: 14px;
@@ -48,7 +62,6 @@
             font-size: 16px;
             background: rgba(255, 255, 255, 0.8);
         }
-
         button {
             padding: 10px 25px;
             border: none;
@@ -60,11 +73,9 @@
             cursor: pointer;
             transition: 0.3s ease;
         }
-
         button:hover {
             transform: scale(1.05);
         }
-
         .short-link-box {
             margin-top: 20px;
             padding: 12px;
@@ -76,13 +87,11 @@
             word-break: break-all;
             color: #003049;
         }
-
         .short-link-box span {
             flex-grow: 1;
             margin-right: 10px;
             font-weight: 600;
         }
-
         .copy-btn {
             padding: 6px 15px;
             background-color: rgba(255, 255, 255, 0.2);
@@ -92,28 +101,23 @@
             cursor: pointer;
             font-weight: bold;
         }
-
         .copy-btn:hover {
             background-color: rgba(255, 255, 255, 0.5);
         }
-
         footer {
             margin-top: 30px;
             color: #003049;
             font-size: 14px;
             text-align: center;
         }
-
         footer a {
             color: #0072ff;
             text-decoration: none;
             font-weight: bold;
         }
-
         footer a:hover {
             text-decoration: underline;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -139,7 +143,6 @@
         <div class="short-link-box">
             <span id="short-url">{{ short_url }}</span>
             <button class="copy-btn" onclick="copyToClipboard('{{ short_url }}')">Copy</button>
-      </div>
         </div>
         {% endif %}
     </div>
